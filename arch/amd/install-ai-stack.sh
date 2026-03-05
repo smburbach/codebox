@@ -24,7 +24,7 @@ echo "Verifying ROCm installation..."
 
 echo ""
 echo "=== Phase 2: Installing tmux and mosh for persistent/remote sessions ==="
-sudo pacman -S --needed tmux mosh
+sudo pacman -S --needed curl tmux mosh
 
 echo ""
 echo "=== Phase 3: Installing Miniforge/Mamba ==="

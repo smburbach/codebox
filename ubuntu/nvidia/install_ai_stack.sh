@@ -51,7 +51,7 @@ nvidia-smi | head -5 || echo "nvidia-smi check skipped"
 
 echo ""
 echo "=== Phase 2: Installing build tools and remote session utilities ==="
-sudo apt-get install -y build-essential tmux mosh
+sudo apt-get install -y build-essential curl tmux mosh
 
 echo ""
 echo "=== Phase 3: Installing Miniforge/Mamba ==="
