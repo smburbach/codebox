@@ -22,7 +22,7 @@ cd ~/codebox
 git submodule update --init
 ```
 
-> **Forking?** 
+> **Forking?**  
 > The `notebook/` directory is a
 > [separate private repo](https://github.com/briney/codebox-notebook) included as a git
 > submodule. If you fork codebox, the submodule will still point to the original notebook repo
