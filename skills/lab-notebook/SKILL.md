@@ -120,7 +120,11 @@ without reading every session log.
 
 ### 3. Commit and Push
 
+The `notebook/` directory is a git submodule. Commit and push inside the
+submodule first, then update the parent repo's submodule pointer.
+
 ```bash
+# commit and push inside the submodule
 cd ~/codebox/notebook
 git add -A
 git commit -m "<project>: session log YYYY-MM-DD {session description}"
@@ -131,6 +135,15 @@ If the push fails (e.g., diverged remote), pull with rebase first:
 
 ```bash
 git pull --rebase && git push
+```
+
+Then update the parent repo's submodule pointer:
+
+```bash
+cd ~/codebox
+git add notebook
+git commit -m "notebook: update submodule to latest"
+git push
 ```
 
 ## Creating a New Project
