@@ -3,7 +3,7 @@
 This is my personal (and highly opinionated) toolkit for agentic development. Contains:
 
 - **`skills/`** — Reusable skill definitions for Claude Code / Codex / other coding agents
-- **`notebook/`** — Lab notebook-styling tracking of each agent's work, decisions, and next steps across different projects
+- **`notebook/`** — Lab notebook-style records of each agent's work, decisions, and next steps
 - **`setup/`** — Shell scripts for configuring dev environments
 
 ## Setup
