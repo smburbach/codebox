@@ -22,7 +22,8 @@ cd ~/codebox
 git submodule update --init
 ```
 
-> **Forking?** The `notebook/` directory is a
+> **Forking?** 
+> The `notebook/` directory is a
 > [separate private repo](https://github.com/briney/codebox-notebook) included as a git
 > submodule. If you fork codebox, the submodule will still point to the original notebook repo
 > (which you won't have access to). Two options:
@@ -45,6 +46,8 @@ git submodule update --init
 > git submodule set-url notebook git@github.com:<your-username>/codebox-notebook.git
 > git submodule update --init
 > ```
+> Note that once you commit one of these operations to your fork, any future clones of your 
+> fork will have your notebook initialized the way you configured it.
 
 ### Claude Code
 
