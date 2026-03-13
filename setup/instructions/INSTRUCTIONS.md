@@ -20,7 +20,7 @@ For web or compiled-language work, consult the relevant supplementary file befor
 This environment uses a lab notebook at `~/codebox/notebook/`. If this directory does not exist, pull the `codebox` repo:
 
 ```bash
-git clone git@github.com:briney/codebox.git ~/codebox
+git clone --recurse-submodules https://github.com/briney/codebox.git ~/codebox
 ```
 
 - **Start of session**: Pull the latest notebook (`cd ~/codebox/notebook && git pull`), then read `~/codebox/notebook/projects/<project>/STATUS.md` before doing work. If unsure which project, check `~/codebox/notebook/PROJECTS.md`.
