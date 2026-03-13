@@ -30,6 +30,10 @@ git clone --recurse-submodules https://github.com/briney/codebox.git ~/codebox
 
 ## Python
 
+### Running Commands
+
+When running commands like Python, pip, or pytest, use `python` / `pip` / `pytest` directly rather than absolute paths.
+
 ### Style & Standards
 
 - **Python 3.11+**. Use modern syntax: `match` statements, `type` aliases, `X | Y` union syntax, `Self`, `override`.
