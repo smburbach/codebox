@@ -19,17 +19,16 @@ decisions, and plans across all projects.
 
 ```
 notebook/
-  PROJECTS.md              # index of all active projects
+  PROJECTS.md                     # index of all active projects
   projects/
     <project-name>/
-      STATUS.md             # current state — the single source of truth
+      STATUS.md                   # current state — the single source of truth
       sessions/
-        YYYY-MM-DD.md       # session logs
-        YYYY-MM-DD-b.md     # multiple sessions per day get a letter suffix
-      ARCHITECTURE.md       # optional: system design, data flow
-      DECISIONS.md          # optional: append-only major decisions log
-      SETUP.md              # optional: environment, dependencies, credentials notes
-      BUGS.md               # optional: known issues tracker
+        YYYY-MM-DD-HH:MM.md       # session logs, time should be 24-hour, local time zone
+      ARCHITECTURE.md             # optional: system design, data flow
+      DECISIONS.md                # optional: append-only major decisions log
+      SETUP.md                    # optional: environment, dependencies, credentials notes
+      BUGS.md                     # optional: known issues tracker
 ```
 
 ## Starting a Session
@@ -50,7 +49,7 @@ Do all three of these steps before finishing:
 
 Generate a short (max 6-8 words) session description.
 
-Create `~/codebox/notebook/projects/<project>/sessions/YYYY-MM-DD_{session description, formatted as snakecase and all lowercase}.md`.
+Create `~/codebox/notebook/projects/<project>/sessions/YYYY-MM-DD-HH:MM_{session description, formatted as snakecase and all lowercase}.md`.
 
 ```markdown
 ---
@@ -61,6 +60,7 @@ project: <project-name>
 tldr: >
   One to two sentences summarizing the session's activities and outcomes.
 model: claude-sonnet-4-20250514  # or gpt-4.1, etc.
+effort: high            # max | xhigh | high | medium | low, etc
 harness: claude-code    # claude-code | codex | opencode | aider | custom
 duration: "Xh Ym"       # wall-clock session duration, if known
 tokens: ~               # total tokens used, if available (null otherwise)
@@ -125,7 +125,7 @@ script to commit and push the submodule, then update the parent repo's
 submodule pointer:
 
 ```bash
-~/codebox/scripts/notebook-commit.sh "<project>: session log YYYY-MM-DD {session description}"
+~/codebox/scripts/notebook-commit.sh "<project>: session log YYYY-MM-DD-HH:MM {session description}"
 ```
 
 ## Creating a New Project
@@ -153,6 +153,7 @@ Create these at the project root when they'd be useful, not preemptively:
 ## Conventions
 
 - **Dates**: Always `YYYY-MM-DD`.
+- **Times**: Always `HH:MM` (24-hour format, local time zone).
 - **Project names**: Lowercase, hyphenated (`balm`, `paperlens`, `bio-kinema`).
 - **Frontmatter**: Every session log must have a YAML frontmatter block. Fill in all fields you have data for; use `~` (null) for anything unavailable. Never fabricate values for `duration` or `tokens` — leave them null if you don't have reliable numbers.
 - **Tone**: Write for a technically skilled reader with zero context on this specific session. Concise but not cryptic.
