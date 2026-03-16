@@ -30,3 +30,6 @@ Thumbs.db
 
 # Ruff
 .ruff_cache/
+
+# macOS
+.DS_Store
