@@ -47,7 +47,9 @@ Do all three of these steps before finishing:
 
 ### 1. Write a Session Log
 
-Generate a short (max 6-8 words) session description.
+Generate a short (max 6-8 words) session description. 
+
+First, get the current date/time by running `date +"%Y-%m-%d-%H:%M"`.
 
 Create `~/codebox/notebook/projects/<project>/sessions/YYYY-MM-DD-HH:MM_{session description, formatted as snakecase and all lowercase}.md`.
 
